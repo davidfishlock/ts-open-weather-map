@@ -1,0 +1,51 @@
+{
+    "name": "open-weather-map",
+    "version": "0.0.1",
+    "description": "A TypeScript wrapper for the Open Weather Map API.",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "sideEffects": false,
+    "author": "David Fishlock",
+    "license": "MIT",
+    "scripts": {
+        "format:check": "npx prettier --check \"./**/*.{ts,tsx,json,md,yml,babelrc,html}\" --ignore-path .gitignore",
+        "format:fix": "npx prettier --write \"./**/*.{ts,tsx,json,md,yml,babelrc,html}\" --ignore-path .gitignore",
+        "lint:check": "eslint ./src --ext ts,tsx",
+        "lint:fix": "eslint ./src --ext ts,tsx --fix",
+        "types:check": "npx tsc -p tsconfig.json",
+        "audit": "npm audit --audit-level=moderate --production",
+        "test": "jest",
+        "build": "npx tsc -p tsconfig.json",
+        "ci:check": "npm-run-all format:check lint:check test audit build",
+        "prepublishOnly": "npm run ci:check",
+        "prepare": "npm run build"
+    },
+    "dependencies": {
+        "axios": "^0.24.0",
+        "axios-case-converter": "^0.9.0",
+        "axios-retry": "^3.2.4",
+        "qs": "^6.10.1",
+        "url-join": "^4.0.1"
+    },
+    "files": [
+        "dist/**/*",
+        "!dist/**/*.test.js",
+        "!dist/**/*.test.d.ts"
+    ],
+    "devDependencies": {
+        "@types/jest": "^27.0.2",
+        "@types/qs": "^6.9.7",
+        "@types/url-join": "^4.0.1",
+        "@typescript-eslint/eslint-plugin": "^5.3.1",
+        "@typescript-eslint/parser": "^5.3.1",
+        "eslint": "^8.2.0",
+        "eslint-config-prettier": "^8.3.0",
+        "jest": "^27.3.1",
+        "jest-mock-extended": "^2.0.4",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^2.4.1",
+        "ts-jest": "^27.0.7",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.4.4"
+    }
+}
