@@ -1,6 +1,6 @@
 {
     "name": "ts-open-weather-map",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A TypeScript wrapper for the Open Weather Map API.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
