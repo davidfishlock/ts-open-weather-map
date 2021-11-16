@@ -4,3 +4,4 @@ node_modules/
 .npm
 .eslintcache
 scratch.ts
+*.tgz

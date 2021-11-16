@@ -1,11 +1,15 @@
 {
-    "name": "open-weather-map",
-    "version": "0.0.1",
+    "name": "ts-open-weather-map",
+    "version": "0.0.2",
     "description": "A TypeScript wrapper for the Open Weather Map API.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "sideEffects": false,
-    "author": "David Fishlock",
+    "repository": "https://github.com/davidfishlock/ts-open-weather-map",
+    "author": {
+        "name": "David Fishlock",
+        "url": "https://github.com/davidfishlock"
+    },
     "license": "MIT",
     "scripts": {
         "format:check": "npx prettier --check \"./**/*.{ts,tsx,json,md,yml,babelrc,html}\" --ignore-path .gitignore",

@@ -1,19 +1,36 @@
-# open-weather-map
+# ts-open-weather-map
 
 A TypeScript wrapper for the Open Weather Map API.
 
 ## Installation
 
 ```
-npm install open-weather-map
+npm install ts-open-weather-map
 ```
 
-## Publishing
+## Usage
 
-A new version is published whenever a new release on GitHub is created.
+API keys can be obtained from the Open Weather Map website: https://openweathermap.org/api
 
-To update the version in both package.json and package-lock.json:
+### OneCall Endpoint
 
-`npm version <major|minor|patch> --no-git-tag-version`
+Basic usage:
 
-Once these changes have been pushed and merged, create a release.
+```
+const api = new OpenWeatherMapApi("MY_API_KEY")
+const response = await api.oneCall(67.75, 26.5) // Latitude and Longitude
+```
+
+Optional parameters:
+
+```
+// Exclude sections from the response, specify unit types and language
+await api.oneCall(67.75, 26.5, ['minutely', 'alerts'], 'metric', 'en')
+```
+
+### Geocoding - Get city data
+
+```
+// Get geo data for Lapland, max 5 results
+await api.geoCoding('Lapland', 5)
+```
