@@ -1,0 +1,19 @@
+name: Release package
+
+on:
+    push:
+        tags:
+            - 'v*'
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Git checkout
+              uses: actions/checkout@v2
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Publish package
+              run: npm publish

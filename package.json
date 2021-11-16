@@ -28,9 +28,7 @@
         "url-join": "^4.0.1"
     },
     "files": [
-        "dist/**/*",
-        "!dist/**/*.test.js",
-        "!dist/**/*.test.d.ts"
+        "dist/**/*"
     ],
     "devDependencies": {
         "@types/jest": "^27.0.2",
