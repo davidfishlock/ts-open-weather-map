@@ -20,9 +20,7 @@
         "audit": "npm audit --audit-level=moderate --production",
         "test": "jest",
         "build": "npx tsc -p tsconfig.json",
-        "ci:check": "npm-run-all format:check lint:check test audit build",
-        "prepublishOnly": "npm run ci:check",
-        "prepare": "npm run build"
+        "ci": "npm-run-all format:check lint:check test audit build"
     },
     "dependencies": {
         "axios": "^0.24.0",
@@ -31,9 +29,6 @@
         "qs": "^6.10.1",
         "url-join": "^4.0.1"
     },
-    "files": [
-        "dist/**/*"
-    ],
     "devDependencies": {
         "@types/jest": "^27.0.2",
         "@types/qs": "^6.9.7",

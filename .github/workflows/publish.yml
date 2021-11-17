@@ -20,7 +20,13 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
+            - name: Run CI build
+              run: npm run ci
+
+            - name: Copy package.json
+              run: cp package.json dist
+
             - name: Publish package
-              run: npm publish --access public
+              run: npm publish dist --access public
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

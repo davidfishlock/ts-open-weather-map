@@ -89,7 +89,6 @@ export type DailyWeatherForecast = DateInfo &
         dewPoint: number // default: Kelvin, metric: Celsius, imperial: Fahrenheit
         uvi: number // 0-11+
         clouds: number // %
-        visibility: number // metres
         weather: WeatherEntry[]
         pop: number // probability of precipitation %
         rain?: number // mm
