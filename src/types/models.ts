@@ -109,5 +109,6 @@ export type City = {
     localNames: Record<string, string>
     lat: number // Coords
     lon: number // Coords
+    state?: string
     country: string
 }
