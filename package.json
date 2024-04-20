@@ -26,7 +26,7 @@
     },
     "dependencies": {
         "axios": "^1.6.8",
-        "axios-case-converter": "^0.9.0",
+        "axios-case-converter": "^1.0.0",
         "axios-retry": "^3.2.4",
         "url-join": "^4.0.1"
     },
