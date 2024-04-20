@@ -85,6 +85,7 @@ export type DailyWeatherForecast = DateInfo &
         temp: DailyTemperatureRange & DailyTemperatureMinMax
         feelsLike: DailyTemperatureRange
         pressure: number // hPa
+        summary: string
         humidity: number // %
         dewPoint: number // default: Kelvin, metric: Celsius, imperial: Fahrenheit
         uvi: number // 0-11+
