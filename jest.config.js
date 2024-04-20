@@ -3,5 +3,8 @@ module.exports = {
     transform: { '^.+\\.ts': 'ts-jest' },
     testMatch: ['**/*.test.ts'],
     clearMocks: true,
-    testEnvironment: 'node'
+    testEnvironment: 'node',
+    moduleNameMapper: {
+        "^axios$": "axios/dist/node/axios.cjs"
+    }
 }
